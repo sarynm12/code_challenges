@@ -13,3 +13,8 @@ end
 def sum_even_numbers(seq)
   seq.select{|num| num % 2 == 0}.sum
 end
+
+# return the two oldest/oldest ages within the array of ages passed in.
+def two_oldest_ages(ages)
+  ages.sort.last(2)
+end
