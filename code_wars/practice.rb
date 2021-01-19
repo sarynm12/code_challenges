@@ -13,14 +13,14 @@ def flatten(ints, arr=[])
     end
   end
   arr
-end 
+end
 
 # Our sequence given was supposed to contain all of the integers from 0 to 9 (in no particular order), but one of them seems to be missing.
 #
 # Write a function that accepts a sequence of unique integers between 0 and 9 (inclusive), and returns the missing element.
 def get_missing_element(seq)
   numbers = (0..9).to_a
-  result = (numbers - seq).join.to_i
+  (numbers - seq).join.to_i
 end
 # Complete the function that takes a sequence of numbers as single parameter. Your function must return the sum of the even values of this sequence.
 #
