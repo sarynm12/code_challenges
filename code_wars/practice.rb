@@ -15,6 +15,23 @@ def flatten(ints, arr=[])
   arr
 end
 
+# Given an array of integers, find the one that appears an odd number of times.
+# There will always be only one integer that appears an odd number of times.
+# Test.describe("Basic tests") do
+#   Test.assert_equals(find_it([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5]), 5)
+#   Test.assert_equals(find_it([1,1,2,-2,5,2,4,4,-1,-2,5]), -1)
+#   Test.assert_equals(find_it([20,1,1,2,2,3,3,5,5,4,20,4,5]), 5)
+#   Test.assert_equals(find_it([10]), 10)
+#   Test.assert_equals(find_it([1,1,1,1,1,1,10,1,1,1,1]), 10)
+# end
+def find_it(seq)
+  seq.each do |num|
+    if seq.count(num) % 2 != 0
+      return num
+    end
+  end
+end
+
 # Our sequence given was supposed to contain all of the integers from 0 to 9 (in no particular order), but one of them seems to be missing.
 #
 # Write a function that accepts a sequence of unique integers between 0 and 9 (inclusive), and returns the missing element.
