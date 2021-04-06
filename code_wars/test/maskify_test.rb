@@ -13,6 +13,13 @@ class MaskifyTest < Minitest::Test
     assert_equal '############5616', maskify.encrypt
   end 
 
+  def test_it_can_handle_edge_cases
+    maskify = Maskify.new('1')
+    assert_equal '1', maskify.encrypt 
+    maskify2 = Maskify.new('')
+    assert_equal '', maskify2.encrypt 
+  end 
+
 end 
 
 # maskify('4556364607935616') # should return '############5616'
