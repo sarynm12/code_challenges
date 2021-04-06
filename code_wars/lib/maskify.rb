@@ -1,4 +1,19 @@
 class Maskify 
+  attr_reader :input 
+
+  def initialize(input)
+    @input = input 
+  end 
+
+  def encrypt 
+    array = @input.chars 
+    last4 = array.pop(4)
+    new = array.map do |char|
+      '#'
+    end 
+    result = new << last4
+    result.flatten.join 
+  end 
 
 end 
 
